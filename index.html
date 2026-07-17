@@ -95,6 +95,8 @@ body{font-family:'Segoe UI',sans-serif;background:#f5f0fa;color:#2a0a30;min-heig
 // ===================== DATOS DE PRODUCTOS =====================
 const PRODUCTS = {
   // PROTEINAS
+  '992': {cat:'PROTEÍNAS', brand:'Proteína', name:'VENNOM', det:'1 kg; 33 serv.; Chocolate o Vainilla', price:25000},
+  '993': {cat:'PROTEÍNAS', brand:'Proteína', name:'XXL', det:'1 kg; 22 serv.; Chocolate o Vainilla', price:27000},
   '42': {cat:'PROTEÍNAS', brand:'Proteína (Pote)', name:'BODY ADVANCE', det:'910 grs; 30 serv.; Chocolate, Vainilla, Dulce de Leche o Frutos Rojos', price:28000},
   '40': {cat:'PROTEÍNAS', brand:'Proteína (Doypack)', name:'ONE FIT', det:'907 grs; 30 serv.; Chocolate o Vainilla', price:38000},
   '38': {cat:'PROTEÍNAS', brand:'Proteína (Doypack)', name:'ENA', det:'453 grs; 14 serv.; Chocolate o Vainilla', price:38000},
@@ -148,6 +150,7 @@ const PRODUCTS = {
   '9': {cat:'CONTROL DE PESO', brand:'Carnitina', name:'STAR NUTRITION', det:'60 cápsulas; 30 serv.', price:15000},
   '12': {cat:'CONTROL DE PESO', brand:'STAR NUTRITION', name:'Quemadores Thermo Fuel Max', det:'120 cápsulas; 30 serv.', price:20000},
   '776': {cat:'CONTROL DE PESO', brand:'STAR NUTRITION', name:'CLA1000', det:'90 cápsulas; 90 serv.', price:23000},
+  '997': {cat:'CONTROL DE PESO', brand:'ONE FIT', name:'Gainer Mass', det:'1,5 kg.; Chocolate', price:37000},
   '10': {cat:'CONTROL DE PESO', brand:'STAR NUTRITION', name:'Mutant Mass', det:'1,5 kg; 17 serv.; Chocolate o Vainilla', price:41000},
   // SALUD
   '50': {cat:'SALUD Y VITAMINAS', brand:'Citrato de Magnesio', name:'ONE FIT', det:'150; 30 serv.', price:8000},
@@ -166,12 +169,14 @@ const PRODUCTS = {
   '52': {cat:'SALUD Y VITAMINAS', brand:'Citrato de Magnesio', name:'STAR NUTRITION', det:'500 grs; 142 serv.; Frutos Rojos', price:28000},
   '58': {cat:'SALUD Y VITAMINAS', brand:'STAR NUTRITION', name:'Omega 3', det:'60 cápsulas; 30 serv.', price:32000},
   // SNACKS
-  '68': {cat:'SNACKS', brand:'ENA', name:'Barra proteíca', det:'1 unidad serv.; Chocolate, Frutilla, Banana Split', price:1900},
+  '995': {cat:'SNACKS', brand:'ENTRENUTS', name:'Barra proteíca', det:'1 unidad serv.; Frutilla ', price:1800},
+  '68': {cat:'SNACKS', brand:'ENA', name:'Barra proteíca', det:'1 unidad serv.; Chocolate, Frutilla, Banana Split, Coco con DDL', price:1900},
   '774': {cat:'SNACKS', brand:'GRANGER', name:'Cookies Proteicas', det:'220 grs; 16 serv.; Vainilla + Chips', price:7000},
   '71': {cat:'SNACKS', brand:'GRANGER', name:'Pancakes KETO', det:'200 grs; 8 serv.; Vainilla', price:9000},
   '70': {cat:'SNACKS', brand:'GRANGER', name:'Cupcakes Proteícos', det:'360 grs; 8 serv.; Chocolate', price:12000},
   '72': {cat:'SNACKS', brand:'GRANGER', name:'Pancakes Proteícos', det:'400 grs; 16 serv.; Chocolate o Vainilla', price:13000},
-  '69': {cat:'SNACKS', brand:'ENA', name:'Caja de barras proteícas', det:'16 unidades serv.; Chocolate, Frutilla, Banana Split', price:27000},
+  '994': {cat:'SNACKS', brand:'ENTRENUTS', name:'Caja de barras proteícas', det:'10 unidades serv.; Frutilla ', price:16000},
+  '69': {cat:'SNACKS', brand:'ENA', name:'Caja de barras proteícas', det:'16 unidades serv.; Chocolate, Frutilla, Banana Split, Coco con DDL', price:27000},
   // SHAKERS
   '62': {cat:'SHAKERS', name:'ENA', price:6000, simple:true},
   '64': {cat:'SHAKERS', name:'GOLD NUTRITION', price:7000, simple:true},
@@ -189,15 +194,15 @@ const PRODUCTS = {
 // Estructura de páginas del catálogo (orden y layout de cada página)
 const PAGES = [
   {type:'cover'},
-  {type:'cat', name:'PROTEINAS', slogan:'"La base de todo cambio"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['42','40','38','47','46','41','45','44','43'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'PROTEINAS', slogan:'"La base de todo cambio"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['992','993','42','40','38','47','46','41','45','44','43'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cat', name:'CREATINA', slogan:'"Potencia cada repetición"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['22','31','24','775','13','25','23','21','29'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cont', grid:'--imgh:40mm;--rgap:2mm;--cgap:5mm;', refs:['18','19','20','14','15','16','26','251','30','27','28'], sz:{b:'7.0pt',n:'9.0pt',d:'6.5pt',p:'11.0pt'}},
   {type:'cat', name:'PRE-ENTRENO Y ENERGÍA', slogan:'"Arrancá con todo"', grid:'--imgh:60mm;--rgap:2mm;--cgap:5mm;', refs:['32','771','33','34','772','37','35','36','773'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cat', name:'AMINOACIDOS', slogan:'"Recuperá más rápido"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['4','5','6','8','7'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'Control de Peso y Definición', slogan:'"Tu cuerpo, tu meta"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['777','11','991','9','12','776','10'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'Control de Peso y Definición', slogan:'"Tu cuerpo, tu meta"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['777','11','991','9','12','776','997','10'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cat', name:'SALUD, BIENESTAR Y VITAMINAS', slogan:'"Cuidate desde adentro"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['50','53','60','48','61','51','59','611','49'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cont', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['56','54','57','55','52','58'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'SNACKS', slogan:'"Rico y nutritivo, sin culpa"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['68','774','71','70','72','69'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'SNACKS', slogan:'"Rico y nutritivo, sin culpa"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['995','68','774','71','70','72','994','69'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cat', name:'SHAKERS', slogan:'"Llevá tu ritual a todos lados"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['62','64','65','778','67','66','63'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'cat', name:'ACCESORIOS', slogan:'"Equipate para rendir"', grid:'--imgh:67mm;--rgap:3mm;--cgap:5mm;', refs:['2','3','1'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'back'},
