@@ -194,17 +194,15 @@ const PRODUCTS = {
 // Estructura de páginas del catálogo (orden y layout de cada página)
 const PAGES = [
   {type:'cover'},
-  {type:'cat', name:'PROTEINAS', slogan:'"La base de todo cambio"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['992','993','42','40','38','47','46','41','45','44','43'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'CREATINA', slogan:'"Potencia cada repetición"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['22','31','24','775','13','25','23','21','29'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cont', grid:'--imgh:40mm;--rgap:2mm;--cgap:5mm;', refs:['18','19','20','14','15','16','26','251','30','27','28'], sz:{b:'7.0pt',n:'9.0pt',d:'6.5pt',p:'11.0pt'}},
-  {type:'cat', name:'PRE-ENTRENO Y ENERGÍA', slogan:'"Arrancá con todo"', grid:'--imgh:60mm;--rgap:2mm;--cgap:5mm;', refs:['32','771','33','34','772','37','35','36','773'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'AMINOACIDOS', slogan:'"Recuperá más rápido"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['4','5','6','8','7'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'Control de Peso y Definición', slogan:'"Tu cuerpo, tu meta"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['777','11','991','9','12','776','997','10'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'SALUD, BIENESTAR Y VITAMINAS', slogan:'"Cuidate desde adentro"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['50','53','60','48','61','51','59','611','49'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cont', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['56','54','57','55','52','58'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'SNACKS', slogan:'"Rico y nutritivo, sin culpa"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['995','68','774','71','70','72','994','69'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'SHAKERS', slogan:'"Llevá tu ritual a todos lados"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['62','64','65','778','67','66','63'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
-  {type:'cat', name:'ACCESORIOS', slogan:'"Equipate para rendir"', grid:'--imgh:67mm;--rgap:3mm;--cgap:5mm;', refs:['2','3','1'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'PROTEINAS', perPage:9, slogan:'"La base de todo cambio"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['992','993','42','40','38','47','46','41','45','44','43'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'CREATINA', perPage:9,slogan:'"Potencia cada repetición"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['22','31','24','775','13','25','23','21','29'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'PRE-ENTRENO Y ENERGÍA',perPage:9, slogan:'"Arrancá con todo"', grid:'--imgh:60mm;--rgap:2mm;--cgap:5mm;', refs:['32','771','33','34','772','37','35','36','773'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'AMINOACIDOS',perPage:6 ,slogan:'"Recuperá más rápido"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['4','5','6','8','7'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'Control de Peso y Definición', perPage:9,slogan:'"Tu cuerpo, tu meta"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['777','11','991','9','12','776','997','10'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'SALUD, BIENESTAR Y VITAMINAS',perPage:9 ,slogan:'"Cuidate desde adentro"', grid:'--imgh:58mm;--rgap:2mm;--cgap:5mm;', refs:['50','53','60','48','61','51','59','611','49'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'SNACKS',perPage:9 ,slogan:'"Rico y nutritivo, sin culpa"', grid:'--imgh:67mm;--rgap:2mm;--cgap:5mm;', refs:['995','68','774','71','70','72','994','69'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'SHAKERS',perPage:9 ,slogan:'"Llevá tu ritual a todos lados"', grid:'--imgh:55mm;--rgap:2mm;--cgap:5mm;', refs:['62','64','65','778','67','66','63'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
+  {type:'cat', name:'ACCESORIOS',perPage:3 ,slogan:'"Equipate para rendir"', grid:'--imgh:67mm;--rgap:3mm;--cgap:5mm;', refs:['2','3','1'], sz:{b:'8.0pt',n:'11.0pt',d:'7.5pt',p:'13.5pt'}},
   {type:'back'},
 ];
 
@@ -550,32 +548,69 @@ function buildCatalogHTML(state){
   <div class="back-foot"><p>CINNAMOON SUPLEMENTOS &nbsp;·&nbsp; ${c.ciudad.toUpperCase()} &nbsp;·&nbsp; 2026</p></div>
 </div>`;
 
-  let pages = '';
-  for(const page of PAGES){
-    if(page.type === 'cover'){ pages += coverPage; continue; }
-    if(page.type === 'back') { pages += backPage;  continue; }
+let pages='';
 
-    const refs = activeRefs(page.refs);
-    if(!refs.length) continue; // omite la página si no hay productos activos
+for(const page of PAGES){
 
-    const hdr = page.type === 'cat' ? `
-  <div class="cat-hdr">
-    <div class="cat-bar"></div>
-    <div class="cat-name" style="font-size:20pt">${page.name}</div>
-    <div class="cat-rule"></div>
-    <div class="cat-slogan" style="font-size:10.5pt">${page.slogan}</div>
-  </div>` : '';
+    if(page.type==='cover'){
+        pages+=coverPage;
+        continue;
+    }
 
-    const prods = refs.map(r => buildProductHTML(r, prices, page.sz)).join('\n');
-    pages += `<div class="page">
-  <img class="page-logo" src="${logoSrc}" alt="CINNAMOON">${hdr}
-  <div class="prods">
-    <div class="grid" style="${page.grid}">
-      ${prods}
-    </div>
-  </div>
-</div>`;
-  }
+    if(page.type==='back'){
+        pages+=backPage;
+        continue;
+    }
+
+    const refs=activeRefs(page.refs);
+
+    if(!refs.length)
+        continue;
+
+    const perPage=page.perPage || refs.length;
+
+    for(let i=0;i<refs.length;i+=perPage){
+
+        const chunk=refs.slice(i,i+perPage);
+
+        const hdr=page.type==='cat'
+        ?`
+<div class="cat-hdr">
+<div class="cat-bar"></div>
+<div class="cat-name" style="font-size:20pt">${page.name}</div>
+<div class="cat-rule"></div>
+<div class="cat-slogan" style="font-size:10.5pt">${page.slogan}</div>
+</div>
+`
+        :'';
+
+        const prods=chunk
+            .map(r=>buildProductHTML(r,prices,page.sz))
+            .join('\n');
+
+        pages+=`
+<div class="page">
+
+<img class="page-logo" src="${logoSrc}" alt="CINNAMOON">
+
+${hdr}
+
+<div class="prods">
+
+<div class="grid" style="${page.grid}">
+
+${prods}
+
+</div>
+
+</div>
+
+</div>
+`;
+
+    }
+
+}
 
   return `<!DOCTYPE html><html lang="es"><head>
 <meta charset="UTF-8">
